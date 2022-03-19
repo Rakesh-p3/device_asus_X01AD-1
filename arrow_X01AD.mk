@@ -21,15 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common Pixel Experience stuff.
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Device identifiers.
 PRODUCT_DEVICE := X01AD
-PRODUCT_NAME := arrow_X01AD
+PRODUCT_NAME := aosp_X01AD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Asus Zenfone Max M2
 PRODUCT_MANUFACTURER := asus
@@ -37,10 +37,10 @@ TARGET_VENDOR := asus
 BOARD_VENDOR := asus
 	
 PRODUCT_GMS_CLIENTID_BASE := android-asus
-# ArrowOS Properties
-TARGET_BOOT_ANIMATION_RES := 1080
-DEVICE_MAINTAINER := Arka
+# Pixel Experience Properties
+TARGET_BOOT_ANIMATION_RES := 720
 TARGET_INCLUDE_PIXEL_CHARGER := true
-
-# ArrowOS additions
-DEVICE_MAINTAINER := Arka
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
